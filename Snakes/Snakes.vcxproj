@@ -69,13 +69,19 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Student\Documents\Programming\SDL\SDL2\include;C:\Users\Student\Documents\Programming\SDL\SDL2_image-2.0.1\include;C:\Users\Student\Documents\Programming\SDL\SDL2_ttf-2.0.14\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\Student\Documents\Programming\SDL\SDL2\lib\x86;C:\Users\Student\Documents\Programming\SDL\SDL2_image-2.0.1\lib\x86;C:\Users\Student\Documents\Programming\SDL\SDL2_ttf-2.0.14\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -111,6 +117,54 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Functions\Files.cpp" />
+    <ClCompile Include="Functions\FoodSystem.cpp" />
+    <ClCompile Include="Functions\GameOver.cpp" />
+    <ClCompile Include="Functions\Initializers.cpp" />
+    <ClCompile Include="Functions\Input.cpp" />
+    <ClCompile Include="Functions\Menu.cpp" />
+    <ClCompile Include="Functions\NPC.cpp" />
+    <ClCompile Include="Functions\Tail.cpp" />
+    <ClCompile Include="Graphics\GraphicFiles_Main.cpp" />
+    <ClCompile Include="Graphics\GraphicFiles_Vars.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Systems\GMI_Vars.cpp" />
+    <ClCompile Include="Variables\Food.cpp" />
+    <ClCompile Include="Variables\InternalRandom.cpp" />
+    <ClCompile Include="Variables\LoopControl.cpp" />
+    <ClCompile Include="Variables\Map.cpp" />
+    <ClCompile Include="Variables\OptionsRandom.cpp" />
+    <ClCompile Include="Variables\Snake.cpp" />
+    <ClCompile Include="Variables\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Functions\Files.h" />
+    <ClInclude Include="Functions\FoodSystem.h" />
+    <ClInclude Include="Functions\GameOver.h" />
+    <ClInclude Include="Functions\Initializers.h" />
+    <ClInclude Include="Functions\Input.h" />
+    <ClInclude Include="Functions\Menu.h" />
+    <ClInclude Include="Functions\NPC.h" />
+    <ClInclude Include="Functions\Tail.h" />
+    <ClInclude Include="Graphics\GraphicFiles_Main.h" />
+    <ClInclude Include="Graphics\GraphicFiles_Vars.h" />
+    <ClInclude Include="Systems\GMI_Vars.h" />
+    <ClInclude Include="Variables\Constants.h" />
+    <ClInclude Include="Variables\Food.h" />
+    <ClInclude Include="Variables\InternalRandom.h" />
+    <ClInclude Include="Variables\LoopControl.h" />
+    <ClInclude Include="Variables\Map.h" />
+    <ClInclude Include="Variables\MidVars.h" />
+    <ClInclude Include="Variables\OptionsRandom.h" />
+    <ClInclude Include="Variables\Snake.h" />
+    <ClInclude Include="Variables\Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Snakes_take_2_(mrb)-2015-10-05\Snakes take 2 (mrb)\SpriteSheet.PNG" />
+    <Image Include="..\..\..\..\Snakes_take_2_(mrb)-2015-10-05\Snakes take 2 (mrb)\Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\..\..\..\Snakes_take_2_(mrb)-2015-10-05\Snakes take 2 (mrb)\lucon.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
