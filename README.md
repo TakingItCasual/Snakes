@@ -1,2 +1,2 @@
 # snakes
-My very first programming project, made in C++. Requires SDL. Made between 2011 and 2013. There are many things I'd do differently now (see my [TIS-100 clone](https://github.com/TakingItCasual/TakingItCasual.github.io) and [mc-ec2](https://github.com/TakingItCasual/mc-ec2), more recent projects), but I wanted to save this since I spent so long on it.
+My very first programming project (a snake game), made in C++ between 2011 and 2013. Requires SDL. There are many things I'd do better now (see my [EC2 instance manager](https://github.com/TakingItCasual/mc-ec2) and my [TIS-100 clone](https://github.com/TakingItCasual/TakingItCasual.github.io), more recent projects), but I wanted to save this since I spent so long on it.
